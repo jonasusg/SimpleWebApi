@@ -12,4 +12,6 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+Console.WriteLine("Hello, World!");
+
 app.Run();
