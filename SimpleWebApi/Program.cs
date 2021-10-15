@@ -14,6 +14,6 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-Console.WriteLine("Hello, Pluralsight!);
+Console.WriteLine("Hello, Pluralsight!");
 
 app.Run();
