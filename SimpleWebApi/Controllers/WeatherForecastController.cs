@@ -1,3 +1,4 @@
+using System.Security.Cryptography.Xml;
 using Microsoft.AspNetCore.Mvc;
 using SimpleWebApi.Entities;
 
@@ -22,6 +23,14 @@ namespace SimpleWebApi.Controllers
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
+            var collection = new[]
+            {
+                -1, 0, -5, 14, 45, 78
+            };
+            var filteredCollection = collection.Where(num => num > 10);
+            var cache1 = filteredCollection.ToList();
+            var cache2 = filteredCollection.ToList();
+
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),
